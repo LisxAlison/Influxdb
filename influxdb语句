@@ -1,0 +1,6 @@
+按tag查询：
+select * from table where location::tag = 'AA02' and time > '2020-09-22T00:00:00.000Z' and time < '2020-09-24T00:00:00.000Z'
+
+按location分组，时间范围1min之内：
+SELECT last("location") FROM "table" WHERE time > now() - 1m and flag0='1' group by location
+
